@@ -1,11 +1,20 @@
-import styles from './Footer.module.css'
+import React from 'react';
+import { Box, Center, Stack } from '@chakra-ui/layout';
+import { Copyright } from './Copyright';
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <>
-      <footer className={styles.footer}>
-        Made with <img src="/netliheart.svg" alt="Netlify Logo" className={styles.logo} /> for you
-      </footer>
-    </>
-  )
-}
+    <Box as='footer' role='contentinfo' mx='auto' maxW='7xl' py='12'>
+      <Center>
+        <Copyright
+          alignSelf={{
+            base: 'center',
+            sm: 'start',
+          }}
+        />
+      </Center>
+    </Box>
+  );
+};
+
+export default Footer;
